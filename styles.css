@@ -1,0 +1,96 @@
+:root {
+    --cell-size: 100px;
+    --mark-size:calc(var(--cell-size) * 0.9)
+}
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+.board {
+    width: calc(var(--cell-size) * 7.5);
+    height: calc(var(--cell-size) * 6.5);
+    background-color: darkblue;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: repeat(7, auto);
+    border-radius: 25px;
+}
+
+
+.cell {
+    border-radius: 50%;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 2px solid blue;
+    background-color: grey;
+    margin: 1px;
+}
+
+.cell.red {
+    background-color: red;
+
+
+}
+
+.cell.yellow {
+    background-color: yellow;
+}
+
+.board.red .cell:hover {
+    background-color: lightcoral;
+}
+
+.board.yellow .cell:hover {
+    background-color: lightyellow;
+}
+
+
+
+.winning-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+}
+.winning-message button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25rem .5rem;
+    cursor: pointer;
+}
+
+.winning-message button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.winning-message.show {
+    display: flex;
+
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+
